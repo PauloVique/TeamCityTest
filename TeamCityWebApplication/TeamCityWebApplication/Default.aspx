@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
     <h1>Testovací stránka teamCity</h1>
-        
+        <asp:Literal ID="Literal1" runat="server"></asp:Literal> 
     </div>
         <div>pokusný text 558</div>
         <div>Transformed Web.config using C:\_temp\_project_TestTeamCity\TeamCityWebApplication\TeamCityWebApplication\Web.Release.config into obj\Release\TransformWebConfig\transformed\Web.config.
