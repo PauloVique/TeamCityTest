@@ -113,6 +113,18 @@
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets" />
+
+  <Target Name="VerifyProperties">
+    <!-- Verify that we have values for all required properties -->
+    <Error Condition=" '$(ProjectName)' == '' " Text="ProjectName is required." />
+  </Target>
+  
+  <Target Name="Deploy" DependsOnTargets="VerifyProperties">
+    <!-- Deploy using windows authentication -->
+    <MSBuild Projects="$(ProjectFile)"
+             ContinueOnError="false" />
+  </Target>
+  
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
