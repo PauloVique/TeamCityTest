@@ -13,6 +13,11 @@ namespace TeamCityWebApplication
         protected void Page_Load(object sender, EventArgs e)
         {
             this.Literal1.Text=ConfigurationManager.AppSettings["textVersion"].ToString();
+
+            var CurrentAssembly = System.Reflection.Assembly.GetExecutingAssembly();
+            string VersionNumber = CurrentAssembly.GetName().Version.ToString();
+            this.Literal2.Text = VersionNumber;
+
         }
     }
 }
