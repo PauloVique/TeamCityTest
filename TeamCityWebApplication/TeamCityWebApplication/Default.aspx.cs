@@ -16,7 +16,7 @@ namespace TeamCityWebApplication
 
             var CurrentAssembly = System.Reflection.Assembly.GetExecutingAssembly();
             string VersionNumber = CurrentAssembly.GetName().Version.ToString();
-            this.Literal2.Text1 = VersionNumber;
+            this.Literal2.Text = VersionNumber;
 
         }
     }
