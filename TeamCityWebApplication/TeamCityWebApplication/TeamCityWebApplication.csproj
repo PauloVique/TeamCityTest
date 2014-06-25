@@ -78,6 +78,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\Package.pubxml" />
     <None Include="Properties\PublishProfiles\PublichToDevel.pubxml" />
     <None Include="Properties\PublishProfiles\TeamCityDevel.pubxml" />
     <None Include="Web.Debug.config">
